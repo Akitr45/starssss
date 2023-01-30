@@ -35,12 +35,6 @@
         <div class="form-group">
             <textarea name ="comment" class ="input large-input" type="text" placeholder="Your review"></textarea>
         </div>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Star Rating System</title>
-            <meta name="viewport" content="width=device-width">
             <style>
                 .star{
                   color: goldenrod;
@@ -68,11 +62,11 @@
                     content: counter(rateme) '/5';
                 }
             </style>
-        </head>
-        <body>
+
+
             <!-- alternate codepen version https://codepen.io/mad-d/pen/aJMPWr?editors=0010 -->
             <h1>Star Rating System</h1>
-            <div class="stars" data-rating="3">
+            <div class="stars" name ="rate" data-rating="1">
                 <span class="star">&nbsp;</span>
                 <span class="star">&nbsp;</span>
                 <span class="star">&nbsp;</span>
@@ -80,7 +74,7 @@
                 <span class="star">&nbsp;</span>
             </div>
             
-            
+            <input type="hidden" name="rating"  id="data-rating-value">
             
             <script>
                 
@@ -114,11 +108,11 @@
                         }
                     });
                     document.querySelector('.stars').setAttribute('data-rating', num);
+                    document.getElementById('data-rating-value').value = num;
                 }
-                
             </script>
-        </body>
-        </html>
+
+
         <button class="primary-btn small-btn">Submit</button>
 
     </form>
